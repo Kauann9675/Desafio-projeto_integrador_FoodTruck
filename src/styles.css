@@ -1,1 +1,508 @@
-/* You can add global styles to this file, and also import other style files */
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: white;
+    min-height: 75px;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 20px;
+}
+
+.logo-icon {
+    font-size: 28px;
+}
+
+.logo-text h1 {
+    font-size: 20px;
+    margin: 0;
+    color: #02011b;
+}
+
+.logo-text p {
+    font-size: 14px;
+    color: #777;
+    margin: 2px 0 0;
+}
+
+
+/* Botões do header */
+
+.header-buttons button {
+    border-radius: 8px;
+    padding: 8px 14px;
+}
+
+.cart-btn {
+    background: #02011b;
+    color: white;
+    border: none;
+}
+
+.cart-btn:hover {
+    background: #15142d;
+    color: white;
+}
+
+.cart-count {
+    background: #a60d2d;
+    color: white;
+    border-radius: 50%;
+
+    min-width: 20px;
+    height: 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+
+    margin-left: 5px;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+    padding: 20px;
+}
+
+.title-area {
+    margin-bottom: 25px;
+}
+
+.title-area h2 {
+    font-size: 28px;
+    color: #02011b;
+    margin-bottom: 5px;
+}
+
+.title-area p {
+    color: #777;
+    margin: 0;
+}
+
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.product-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+
+    height: 100%;
+
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.product-content {
+    padding: 14px;
+}
+
+.product-content h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #02011b;
+}
+
+.product-description {
+    color: #666;
+    font-size: 14px;
+    min-height: 42px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #02011b;
+}
+
+
+/* =========================
+   BOTÕES DOS PRODUTOS
+========================= */
+
+.add-btn {
+    background: #02011b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+
+    padding: 8px 14px;
+}
+
+.add-btn:hover {
+    background: #15142d;
+    color: white;
+}
+
+.ingredients-btn {
+    background: white;
+    color: #02011b;
+
+    border: 1px solid #02011b;
+    border-radius: 8px;
+
+    padding: 8px;
+}
+
+.ingredients-btn:hover {
+    background: #02011b;
+    color: white;
+}
+
+
+/* =========================
+   MODAIS
+========================= */
+
+.cart-modal,
+.orders-modal,
+.checkout-modal {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 999;
+}
+
+
+/* Conteúdo do carrinho */
+
+.cart-content,
+.orders-content {
+    background: white;
+
+    width: 100%;
+    max-width: 700px;
+
+    max-height: 90vh;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    overflow-y: auto;
+}
+
+
+/* Checkout */
+
+.checkout-content {
+    background: white;
+
+    width: 100%;
+    max-width: 450px;
+
+    max-height: 90vh;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    overflow-y: auto;
+}
+
+
+/* =========================
+   BOTÃO FECHAR
+========================= */
+
+.close-btn {
+    background: transparent;
+    border: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    color: #555;
+}
+
+.close-btn:hover {
+    color: #02011b;
+}
+
+
+/* =========================
+   CARRINHO
+========================= */
+
+.cart-item {
+    border-bottom: 1px solid #ddd;
+
+    padding: 15px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item h4 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.cart-item p {
+    color: #777;
+    margin: 0;
+}
+
+.cart-footer {
+    border-top: 1px solid #ddd;
+
+    padding-top: 15px;
+
+    margin-top: 15px;
+}
+
+.checkout-btn,
+.confirm-btn {
+    background: #02011b;
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 10px;
+}
+
+.checkout-btn:hover,
+.confirm-btn:hover {
+    background: #15142d;
+    color: white;
+}
+
+
+/* =========================
+   CHECKOUT
+========================= */
+
+.option-btn {
+    border: 1px solid #02011b;
+    background: white;
+    color: #02011b;
+
+    border-radius: 8px;
+}
+
+.option-btn:hover {
+    background: #02011b;
+    color: white;
+}
+
+.option-btn.active {
+    background: #02011b;
+    color: white;
+}
+
+
+/* =========================
+   INGREDIENTES
+========================= */
+
+.modal-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+.modal-box {
+    background: white;
+
+    width: 100%;
+    max-width: 420px;
+
+    border-radius: 16px;
+
+    padding: 20px;
+}
+
+.modal-box h2 {
+    color: #02011b;
+}
+
+.modal-box p {
+    color: #777;
+}
+
+
+/* =========================
+   PEDIDOS
+========================= */
+
+.order-card {
+    background: white;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    padding: 15px;
+
+    margin-bottom: 12px;
+}
+
+.order-card h4 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.order-count {
+    width: 30px;
+    height: 30px;
+
+    background: #02011b;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 13px;
+}
+
+.order-tag {
+    background: #eee;
+
+    padding: 5px 10px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: white;
+
+    border-top: 1px solid #ddd;
+
+    margin-top: 40px;
+
+    padding: 25px 20px;
+
+    text-align: center;
+}
+
+.footer p {
+    color: #02011b;
+    font-weight: bold;
+}
+
+.footer small {
+    color: #777;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 576px) {
+
+    .header {
+        padding: 12px;
+    }
+
+    .logo-text h1 {
+        font-size: 17px;
+    }
+
+    .logo-text p {
+        font-size: 11px;
+    }
+
+    .logo-icon {
+        font-size: 22px;
+    }
+
+    .header-buttons button {
+        padding: 7px 9px;
+        font-size: 13px;
+    }
+
+    .main {
+        padding: 15px;
+    }
+
+    .title-area h2 {
+        font-size: 24px;
+    }
+
+    .product-card img {
+        height: 190px;
+    }
+
+    .cart-content,
+    .orders-content,
+    .checkout-content {
+        max-height: 95vh;
+    }
+
+}
