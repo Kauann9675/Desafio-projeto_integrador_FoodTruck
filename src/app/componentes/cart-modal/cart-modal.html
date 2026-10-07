@@ -1,53 +1,44 @@
-<div class="cart-modal">
+<div class="cart-modal" *ngIf="aberto">
 
     <div class="cart-content">
 
-        <!-- Cabeçalho -->
         <div class="d-flex justify-content-between align-items-center">
-
             <h2>Seu Carrinho</h2>
 
             <button class="close-btn">
                 ×
             </button>
-
         </div>
 
-
-        <!-- Produtos -->
         <div id="cart-items">
 
-            <div class="cart-item">
+            <div 
+                class="cart-item"
+                *ngFor="let item of itens; let i = index">
 
                 <div>
-                    <h4>X-Salada</h4>
-                    <p>Quantidade: 1</p>
+                    <strong>{{ item.nome }}</strong>
+                    <p>R$ {{ item.preco.toFixed(2) }}</p>
                 </div>
 
-                <strong>
-                    R$ 25,00
-                </strong>
+                <button 
+                    class="btn btn-danger"
+                    (click)="removerProduto(i)">
+                    Remover
+                </button>
 
             </div>
 
         </div>
 
-
-        <!-- Rodapé -->
         <div class="cart-footer">
 
-            <div class="d-flex justify-content-between">
+            <strong>
+                Total: R$ {{ calcularTotal().toFixed(2) }}
+            </strong>
 
-                <strong>Total:</strong>
-
-                <strong>
-                    R$ 25,00
-                </strong>
-
-            </div>
-
-            <button class="btn checkout-btn w-100 mt-3">
-                Finalizar Pedido
+            <button class="confirm-btn">
+                Finalizar pedido
             </button>
 
         </div>

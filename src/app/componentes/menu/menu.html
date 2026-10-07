@@ -1,37 +1,12 @@
-<section class="menu">
+<div class="row g-4">
 
-    <!-- Título -->
-    <div class="title-area">
+    <div
+        class="col-12 col-md-6 col-lg-4"
+        *ngFor="let produto of foodTruck.products">
 
-        <h2>Nosso Cardápio</h2>
-
-        <p>
-            Escolha seus pratos favoritos e adicione ao carrinho
-        </p>
+        <app-product-card [produto]="produto">
+        </app-product-card>
 
     </div>
 
-
-    <!-- Produtos -->
-    <div class="row g-4">
-
-        <!-- Produto 1 -->
-        <div class="col-12 col-md-6 col-lg-4">
-           
-        </div>
-
-
-        <!-- Produto 2 -->
-        <div class="col-12 col-md-6 col-lg-4">
-            
-        </div>
-
-
-        <!-- Produto 3 -->
-        <div class="col-12 col-md-6 col-lg-4">
-            
-        </div>
-
-    </div>
-
-</section>
+</div>

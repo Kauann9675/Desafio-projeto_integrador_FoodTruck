@@ -1,9 +1,22 @@
 import { Component } from '@angular/core';
+import { FoodTruckService } from '../../Service/food-truck.service';
 
 @Component({
-  imports: [],
   selector: 'app-header',
-  styleUrl: './header.css',
   templateUrl: './header.html',
+  styleUrl: './header.css'
 })
-export class Header {}
+export class Header {
+
+  constructor(
+    public foodTruck: FoodTruckService
+  ) {}
+
+
+  get cartCount() {
+
+    return this.foodTruck.getCount();
+
+  }
+
+}

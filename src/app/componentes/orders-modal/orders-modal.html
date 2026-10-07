@@ -1,77 +1,21 @@
-<div class="orders-modal">
+<div
+    class="order-card-new"
+    *ngFor="let order of orders" >
 
-    <div class="orders-content">
+    <h3>
+        {{ order.customer }}
+    </h3>
 
-        <!-- Cabeçalho -->
-        <div class="d-flex justify-content-between align-items-center">
-
-            <h2>Meus Pedidos</h2>
-
-            <button class="close-btn">
-                ×
-            </button>
-
-        </div>
-
-
-        <!-- Filtro -->
-        <div class="mb-3">
-
-            <label for="order-filter" class="form-label">
-                Filtrar pedidos
-            </label>
-
-            <select
-                id="order-filter"
-                class="form-select"
-            >
-
-                <option value="todos">
-                    Todos
-                </option>
-
-                <option value="pendentes">
-                    Pendentes
-                </option>
-
-                <option value="concluidos">
-                    Concluídos
-                </option>
-
-            </select>
-
-        </div>
-
-
-        <!-- Lista -->
-        <div id="orders-list">
-
-            <div class="order-card">
-
-                <div class="d-flex justify-content-between">
-
-                    <h4>
-                        Pedido #001
-                    </h4>
-
-                    <span class="order-count">
-                        1
-                    </span>
-
-                </div>
-
-                <p>
-                    X-Salada
-                </p>
-
-                <span class="order-tag">
-                    Concluído
-                </span>
-
-            </div>
-
-        </div>
-
+    <div>
+        CPF: {{ order.cpf }}
     </div>
+
+    <div>
+        {{ order.date }} • {{ order.time }}
+    </div>
+
+    <strong>
+        R$ {{ order.total.toFixed(2) }}
+    </strong>
 
 </div>

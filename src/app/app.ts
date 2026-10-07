@@ -7,10 +7,11 @@ import { CheckoutModal } from './componentes/checkout-modal/checkout-modal';
 import { Header } from './componentes/header/header';
 import { ModalOverlay } from './componentes/modal-overlay/modal-overlay';
 import { ProductCard } from './componentes/product-card/product-card';
+import { OrdersModal } from './componentes/orders-modal/orders-modal';
 
 @Component({
   selector: 'app-root',
-  imports: [Footer, Menu, CartModal, CheckoutModal, Header, ModalOverlay, ProductCard, RouterOutlet],
+  imports: [Footer, Menu, CartModal, CheckoutModal, Header, ModalOverlay, OrdersModal],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
